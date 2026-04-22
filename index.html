@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>diorepo — deftio Project Dashboard</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+  --bg-panel: #f1f3f5;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --border: #dee2e6;
+  --accent: #0066cc;
+  --accent-hover: #0052a3;
+  --green: #28a745;
+  --yellow: #ffc107;
+  --red: #dc3545;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a2e;
+    --bg-alt: #16213e;
+    --bg-panel: #0f3460;
+    --text: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border: #333;
+    --accent: #4da6ff;
+    --accent-hover: #80bfff;
+    --shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 20px;
+}
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.toolbar input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-alt);
+  color: var(--text);
+  font-size: 0.9rem;
+  min-width: 240px;
+}
+.toolbar button {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-alt);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.toolbar button:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+thead th {
+  background: var(--bg-alt);
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid var(--border);
+  font-weight: 600;
+}
+thead th:hover { color: var(--accent); }
+thead th .sort-arrow { margin-left: 4px; font-size: 0.7rem; }
+tbody tr {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+tbody tr:nth-child(even) { background: var(--bg-alt); }
+tbody tr:hover { background: var(--bg-panel); }
+tbody td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.issue-green { color: var(--green); font-weight: 600; }
+.issue-yellow { color: var(--yellow); font-weight: 600; }
+.issue-red { color: var(--red); font-weight: 600; }
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.detail-row { display: none; }
+.detail-row.open { display: table-row; }
+.detail-row td {
+  padding: 16px 20px;
+  background: var(--bg-panel);
+  border-bottom: 2px solid var(--border);
+}
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  white-space: normal;
+}
+.detail-content h3 { margin-bottom: 6px; font-size: 1rem; }
+.detail-content ul { list-style: none; padding: 0; }
+.detail-content ul li { padding: 3px 0; font-size: 0.85rem; }
+.detail-content a { color: var(--accent); text-decoration: none; }
+.detail-content a:hover { text-decoration: underline; }
+.status-bar {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+@media (max-width: 768px) {
+  .detail-content { grid-template-columns: 1fr; }
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .toolbar input[type="text"] { min-width: auto; }
+}
+</style>
+</head>
+<body>
+<h1>diorepo</h1>
+<p class="subtitle">Cross-repo dashboard for <a href="https://github.com/deftio" style="color:var(--accent)">deftio</a> open-source projects</p>
+
+<div class="toolbar">
+  <input type="text" id="filterInput" placeholder="Filter projects..." />
+  <button onclick="exportCSV()">Export CSV</button>
+  <button onclick="exportJSON()">Export JSON</button>
+  <button onclick="exportMD()">Export Markdown</button>
+</div>
+
+<div class="table-wrap">
+  <table id="mainTable">
+    <thead>
+      <tr>
+        <th data-col="name">Project <span class="sort-arrow"></span></th>
+        <th data-col="stars">Stars <span class="sort-arrow"></span></th>
+        <th data-col="contributors">Contributors <span class="sort-arrow"></span></th>
+        <th data-col="openIssues">Open Issues <span class="sort-arrow"></span></th>
+        <th data-col="totalIssues">Total Issues <span class="sort-arrow"></span></th>
+        <th data-col="downloads">Downloads <span class="sort-arrow"></span></th>
+        <th data-col="npm">npm <span class="sort-arrow"></span></th>
+        <th data-col="pypi">PyPI <span class="sort-arrow"></span></th>
+        <th data-col="arduino">Arduino <span class="sort-arrow"></span></th>
+        <th data-col="platformio">PlatformIO <span class="sort-arrow"></span></th>
+        <th data-col="espressif">Espressif <span class="sort-arrow"></span></th>
+        <th data-col="githubTag">GitHub Tag <span class="sort-arrow"></span></th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<div class="status-bar" id="statusBar">Loading...</div>
+
+<script>
+const PROJECTS = [
+  { name: "bitwrench",    github: "deftio/bitwrench",    npm: "bitwrench" },
+  { name: "fr_math",      github: "deftio/fr_math" },
+  { name: "companders",   github: "deftio/companders",   npm: "companders" },
+  { name: "quikdown",     github: "deftio/quikdown",     npm: "quikdown" },
+  { name: "quikchat",     github: "deftio/quikchat",     npm: "quikchat" },
+  { name: "xelp",         github: "deftio/xelp" },
+  { name: "triepack",     github: "deftio/triepack",     npm: "triepack" },
+  { name: "jsonvice",     github: "deftio/jsonvice",     npm: "jsonvice" },
+  { name: "html-to-docx", github: "deftio/html-to-docx" },
+  { name: "simpleJSLib",  github: "deftio/simpleJSLib" },
+  { name: "jado",         github: "deftio/jado" },
+  { name: "webwrench",    github: "deftio/webwrench" },
+  { name: "pocketdock",   github: "deftio/pocketdock" },
+  { name: "MirrorMirror", github: "deftio/MirrorMirror" },
+  { name: "WebAudioSpectrum", github: "deftio/WebAudioSpectrum" },
+  { name: "web-audio-latency-tester", github: "deftio/web-audio-latency-tester" },
+  { name: "provisional-patent-template", github: "deftio/provisional-patent-template" },
+  { name: "C-and-Cpp-Tests-with-CI-CD-Example", github: "deftio/C-and-Cpp-Tests-with-CI-CD-Example" },
+];
+
+// State
+let projectData = PROJECTS.map(p => ({
+  ...p,
+  stars: null,
+  contributors: null,
+  openIssues: null,
+  totalIssues: null,
+  downloads: null,
+  npmDownloads: null,
+  pypiDownloads: null,
+  npmVersion: null,
+  pypiVersion: null,
+  arduinoVersion: null,
+  platformioVersion: null,
+  espressifVersion: null,
+  githubTag: null,
+  description: null,
+  language: null,
+  releases: null,
+  recentIssues: null,
+}));
+
+let sortCol = "name";
+let sortAsc = true;
+
+// Helpers
+function sp() { return '<span class="spinner"></span>'; }
+
+function issueClass(n) {
+  if (n === null) return '';
+  if (n === 0) return 'issue-green';
+  if (n <= 5) return 'issue-yellow';
+  return 'issue-red';
+}
+
+function cell(val, cls) {
+  if (val === null) return sp();
+  if (val === undefined || val === '') return '—';
+  const c = cls ? ` class="${cls}"` : '';
+  return `<span${c}>${val}</span>`;
+}
+
+function cellDownloads(p) {
+  if (p.downloads === null) return sp();
+  if (p.downloads === 0 || p.downloads === '—') return '—';
+  const parts = [];
+  if (p.npmDownloads) parts.push(`npm: ${p.npmDownloads.toLocaleString()}`);
+  if (p.pypiDownloads) parts.push(`PyPI: ${p.pypiDownloads.toLocaleString()}`);
+  const tip = parts.length ? parts.join(', ') : '';
+  const total = typeof p.downloads === 'number' ? p.downloads.toLocaleString() : p.downloads;
+  return `<span title="${tip}">${total}</span>`;
+}
+
+function aggregateDownloads(p) {
+  const npm = p.npmDownloads || 0;
+  const pypi = p.pypiDownloads || 0;
+  const total = npm + pypi;
+  p.downloads = total > 0 ? total : '—';
+}
+
+// Rendering
+function renderTable() {
+  const filter = document.getElementById('filterInput').value.toLowerCase();
+  let data = projectData.filter(p => p.name.toLowerCase().includes(filter));
+
+  data.sort((a, b) => {
+    let av = a[sortCol], bv = b[sortCol];
+    if (av === null || av === undefined) av = sortAsc ? Infinity : -Infinity;
+    if (bv === null || bv === undefined) bv = sortAsc ? Infinity : -Infinity;
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (av < bv) return sortAsc ? -1 : 1;
+    if (av > bv) return sortAsc ? 1 : -1;
+    return 0;
+  });
+
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = data.map((p, i) => `
+    <tr onclick="toggleDetail('${p.name}')">
+      <td><a href="https://github.com/${p.github}" target="_blank" onclick="event.stopPropagation()">${p.name}</a></td>
+      <td>${cell(p.stars)}</td>
+      <td>${cell(p.contributors)}</td>
+      <td>${cell(p.openIssues, issueClass(p.openIssues))}</td>
+      <td>${cell(p.totalIssues)}</td>
+      <td>${cellDownloads(p)}</td>
+      <td>${cell(p.npmVersion)}</td>
+      <td>${cell(p.pypiVersion)}</td>
+      <td>${cell(p.arduinoVersion)}</td>
+      <td>${cell(p.platformioVersion)}</td>
+      <td>${cell(p.espressifVersion)}</td>
+      <td>${cell(p.githubTag)}</td>
+    </tr>
+    <tr class="detail-row" id="detail-${p.name}">
+      <td colspan="12">
+        <div class="detail-content">
+          <div>
+            <h3>${p.name}</h3>
+            <p>${p.description || 'Loading...'}</p>
+            <p style="color:var(--text-muted)">Language: ${p.language || '—'}</p>
+            <h3 style="margin-top:12px">Registry Links</h3>
+            <ul>
+              <li><a href="https://github.com/${p.github}" target="_blank">GitHub</a></li>
+              ${p.npm ? `<li><a href="https://www.npmjs.com/package/${p.npm}" target="_blank">npm</a></li>` : ''}
+              ${p.pypi ? `<li><a href="https://pypi.org/project/${p.pypi}" target="_blank">PyPI</a></li>` : ''}
+              ${p.platformio ? `<li><a href="https://registry.platformio.org/libraries/${p.platformio}" target="_blank">PlatformIO</a></li>` : ''}
+              ${p.espressif ? `<li><a href="https://components.espressif.com/components/${p.espressif}" target="_blank">Espressif</a></li>` : ''}
+            </ul>
+          </div>
+          <div>
+            <h3>Recent Releases</h3>
+            <ul>${renderReleases(p)}</ul>
+            <h3 style="margin-top:12px">Recent Issues</h3>
+            <ul>${renderIssues(p)}</ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+
+  // Update sort arrows
+  document.querySelectorAll('thead th').forEach(th => {
+    const arrow = th.querySelector('.sort-arrow');
+    if (th.dataset.col === sortCol) {
+      arrow.textContent = sortAsc ? '▲' : '▼';
+    } else {
+      arrow.textContent = '';
+    }
+  });
+}
+
+function renderReleases(p) {
+  if (!p.releases) return '<li>Loading...</li>';
+  if (p.releases.length === 0) return '<li>No releases</li>';
+  return p.releases.slice(0, 5).map(r =>
+    `<li><a href="${r.html_url}" target="_blank">${r.tag_name}</a> — ${new Date(r.published_at).toLocaleDateString()}</li>`
+  ).join('');
+}
+
+function renderIssues(p) {
+  if (!p.recentIssues) return '<li>Loading...</li>';
+  if (p.recentIssues.length === 0) return '<li>No open issues</li>';
+  return p.recentIssues.slice(0, 5).map(iss =>
+    `<li><a href="${iss.html_url}" target="_blank">#${iss.number}</a> ${iss.title}</li>`
+  ).join('');
+}
+
+function toggleDetail(name) {
+  const row = document.getElementById(`detail-${name}`);
+  if (row) {
+    row.classList.toggle('open');
+    // Fetch releases and issues on demand
+    if (row.classList.contains('open')) {
+      const p = projectData.find(x => x.name === name);
+      if (!p.releases) fetchReleases(p);
+      if (!p.recentIssues) fetchIssues(p);
+    }
+  }
+}
+
+// Sort
+document.querySelectorAll('thead th').forEach(th => {
+  th.addEventListener('click', () => {
+    const col = th.dataset.col;
+    if (sortCol === col) {
+      sortAsc = !sortAsc;
+    } else {
+      sortCol = col;
+      sortAsc = true;
+    }
+    renderTable();
+  });
+});
+
+// Filter
+document.getElementById('filterInput').addEventListener('input', renderTable);
+
+// Column mapping for sort
+const colMap = {
+  name: 'name', stars: 'stars', contributors: 'contributors',
+  openIssues: 'openIssues', totalIssues: 'totalIssues', downloads: 'downloads',
+  npm: 'npmVersion', pypi: 'pypiVersion', arduino: 'arduinoVersion',
+  platformio: 'platformioVersion', espressif: 'espressifVersion', githubTag: 'githubTag'
+};
+
+// API Fetching
+async function fetchJSON(url) {
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) return null;
+    return await resp.json();
+  } catch { return null; }
+}
+
+async function fetchContributorCount(repo) {
+  try {
+    const resp = await fetch(`https://api.github.com/repos/${repo}/contributors?per_page=1&anon=1`);
+    if (!resp.ok) return null;
+    const link = resp.headers.get('Link');
+    if (link) {
+      const match = link.match(/page=(\d+)>; rel="last"/);
+      if (match) return parseInt(match[1]);
+    }
+    const data = await resp.json();
+    return Array.isArray(data) ? data.length : null;
+  } catch { return null; }
+}
+
+async function fetchGitHubData() {
+  const repos = await fetchJSON('https://api.github.com/users/deftio/repos?per_page=100');
+  if (!repos) { updateStatus('Failed to fetch GitHub repos'); return; }
+
+  for (const p of projectData) {
+    const repoName = p.github.split('/')[1];
+    const repo = repos.find(r => r.name === repoName);
+    if (repo) {
+      p.stars = repo.stargazers_count;
+      p.description = repo.description || '';
+      p.language = repo.language || '';
+    }
+  }
+  renderTable();
+
+  // Fetch contributors in parallel (with concurrency limit)
+  const contribPromises = projectData.map(async (p) => {
+    p.contributors = await fetchContributorCount(p.github);
+    renderTable();
+  });
+  await Promise.all(contribPromises);
+
+  // Fetch open + closed issue counts via search API (excludes PRs)
+  for (const p of projectData) {
+    const repoName = p.github.split('/')[1];
+    const open = await fetchJSON(`https://api.github.com/search/issues?q=repo:deftio/${repoName}+is:issue+is:open`);
+    p.openIssues = (open && open.total_count !== undefined) ? open.total_count : 0;
+    renderTable();
+    await new Promise(r => setTimeout(r, 500));
+
+    const closed = await fetchJSON(`https://api.github.com/search/issues?q=repo:deftio/${repoName}+is:issue+is:closed`);
+    const closedCount = (closed && closed.total_count !== undefined) ? closed.total_count : 0;
+    p.totalIssues = p.openIssues + closedCount;
+    renderTable();
+    await new Promise(r => setTimeout(r, 500));
+  }
+
+  // Fetch latest tag/release
+  for (const p of projectData) {
+    const rel = await fetchJSON(`https://api.github.com/repos/${p.github}/releases/latest`);
+    if (rel && rel.tag_name) {
+      p.githubTag = rel.tag_name;
+    } else {
+      // Try tags
+      const tags = await fetchJSON(`https://api.github.com/repos/${p.github}/tags?per_page=1`);
+      if (tags && tags.length > 0) {
+        p.githubTag = tags[0].name;
+      } else {
+        p.githubTag = '—';
+      }
+    }
+    renderTable();
+  }
+}
+
+async function fetchNpmData() {
+  for (const p of projectData) {
+    if (!p.npm) { p.npmVersion = '—'; p.npmDownloads = 0; continue; }
+    const reg = await fetchJSON(`https://registry.npmjs.org/${p.npm}`);
+    if (reg && reg['dist-tags']) {
+      p.npmVersion = reg['dist-tags'].latest || '—';
+    } else {
+      p.npmVersion = '—';
+    }
+    const dl = await fetchJSON(`https://api.npmjs.org/downloads/point/last-week/${p.npm}`);
+    p.npmDownloads = (dl && dl.downloads !== undefined) ? dl.downloads : 0;
+    aggregateDownloads(p);
+    renderTable();
+  }
+}
+
+async function fetchPypiData() {
+  for (const p of projectData) {
+    const pkg = p.pypi || p.name;
+    const data = await fetchJSON(`https://pypi.org/pypi/${pkg}/json`);
+    if (data && data.info) {
+      p.pypiVersion = data.info.version;
+      // Fetch PyPI weekly downloads from pypistats.org
+      const stats = await fetchJSON(`https://pypistats.org/api/packages/${pkg}/recent`);
+      p.pypiDownloads = (stats && stats.data && stats.data.last_week) ? stats.data.last_week : 0;
+    } else {
+      p.pypiVersion = '—';
+      p.pypiDownloads = 0;
+    }
+    aggregateDownloads(p);
+    renderTable();
+  }
+}
+
+async function fetchArduinoData() {
+  for (const p of projectData) {
+    p.arduinoVersion = '—';
+    for (const branch of ['master', 'main']) {
+      try {
+        const resp = await fetch(`https://raw.githubusercontent.com/${p.github}/${branch}/library.properties`);
+        if (resp.ok) {
+          const text = await resp.text();
+          const match = text.match(/version=(.*)/);
+          p.arduinoVersion = match ? match[1].trim() : 'Yes';
+          break;
+        }
+      } catch { /* try next branch */ }
+    }
+    renderTable();
+  }
+}
+
+async function fetchPlatformioData() {
+  for (const p of projectData) {
+    const owner = p.github.split('/')[0];
+    const name = p.platformio || p.name;
+    const data = await fetchJSON(`https://api.registry.platformio.org/v3/packages/${owner}/library/${name}`);
+    if (data && data.version) {
+      p.platformioVersion = data.version.name || data.version;
+    } else {
+      p.platformioVersion = '—';
+    }
+    renderTable();
+  }
+}
+
+async function fetchEspressifData() {
+  for (const p of projectData) {
+    const namespace = p.github.split('/')[0];
+    const name = p.espressif || p.name;
+    const data = await fetchJSON(`https://components.espressif.com/api/components/${namespace}/${name}`);
+    if (data && data.versions && data.versions.length > 0) {
+      p.espressifVersion = data.versions[0].version;
+    } else {
+      p.espressifVersion = '—';
+    }
+    renderTable();
+  }
+}
+
+async function fetchReleases(p) {
+  const data = await fetchJSON(`https://api.github.com/repos/${p.github}/releases?per_page=5`);
+  p.releases = data || [];
+  renderTable();
+}
+
+async function fetchIssues(p) {
+  const data = await fetchJSON(`https://api.github.com/repos/${p.github}/issues?state=open&per_page=10`);
+  // Filter out pull requests (GitHub issues API includes PRs)
+  p.recentIssues = (data || []).filter(i => !i.pull_request).slice(0, 5);
+  renderTable();
+}
+
+// Export functions
+function getExportData() {
+  return projectData.map(p => ({
+    project: p.name,
+    stars: p.stars ?? '',
+    contributors: p.contributors ?? '',
+    open_issues: p.openIssues ?? '',
+    total_issues: p.totalIssues ?? '',
+    downloads: p.downloads ?? '',
+    npm: p.npmVersion ?? '',
+    pypi: p.pypiVersion ?? '',
+    arduino: p.arduinoVersion ?? '',
+    platformio: p.platformioVersion ?? '',
+    espressif: p.espressifVersion ?? '',
+    github_tag: p.githubTag ?? ''
+  }));
+}
+
+function exportCSV() {
+  const data = getExportData();
+  const headers = Object.keys(data[0]);
+  const csv = [headers.join(','), ...data.map(row => headers.map(h => `"${row[h]}"`).join(','))].join('\n');
+  download('diorepo.csv', csv, 'text/csv');
+}
+
+function exportJSON() {
+  const data = getExportData();
+  download('diorepo.json', JSON.stringify(data, null, 2), 'application/json');
+}
+
+function exportMD() {
+  const data = getExportData();
+  const headers = Object.keys(data[0]);
+  const md = [
+    '| ' + headers.join(' | ') + ' |',
+    '| ' + headers.map(() => '---').join(' | ') + ' |',
+    ...data.map(row => '| ' + headers.map(h => row[h]).join(' | ') + ' |')
+  ].join('\n');
+  download('diorepo.md', md, 'text/markdown');
+}
+
+function download(filename, content, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function updateStatus(msg) {
+  document.getElementById('statusBar').textContent = msg;
+}
+
+// Init
+async function init() {
+  renderTable();
+  updateStatus('Fetching data...');
+
+  await Promise.all([
+    fetchGitHubData(),
+    fetchNpmData(),
+    fetchPypiData(),
+    fetchArduinoData(),
+    fetchPlatformioData(),
+    fetchEspressifData()
+  ]);
+
+  // Aggregate any remaining null downloads
+  for (const p of projectData) {
+    aggregateDownloads(p);
+  }
+  renderTable();
+  updateStatus(`Loaded ${projectData.length} projects. Last updated: ${new Date().toLocaleString()}`);
+}
+
+init();
+</script>
+</body>
+</html>

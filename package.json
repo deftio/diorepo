@@ -1,0 +1,18 @@
+{
+  "name": "diorepo",
+  "version": "1.0.0",
+  "description": "Cross-repo dashboard for deftio open-source projects",
+  "main": "diorepo.js",
+  "bin": {
+    "diorepo": "./diorepo.js"
+  },
+  "scripts": {
+    "start": "node diorepo.js"
+  },
+  "keywords": ["dashboard", "github", "npm", "pypi", "deftio"],
+  "author": "deftio",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
