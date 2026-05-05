@@ -172,21 +172,28 @@ async function fetchAllData(projects, token) {
     const esp = await fetchJSON(`https://components.espressif.com/api/components/${espNs}/${espName}`);
     r.espressifVersion = (esp && esp.versions && esp.versions.length > 0) ? esp.versions[0].version : '—';
 
-    // Arduino (check master then main for library.properties)
+    // Arduino (fetch published version from Arduino Library Manager logs)
     r.arduinoVersion = '—';
-    for (const branch of ['master', 'main']) {
-      try {
-        const resp = await fetch(`https://raw.githubusercontent.com/${r.github}/${branch}/library.properties`, {
-          headers: { 'User-Agent': 'diorepo-cli' }
-        });
-        if (resp.ok) {
-          const text = await resp.text();
-          const match = text.match(/version=(.*)/);
-          r.arduinoVersion = match ? match[1].trim() : 'Yes';
-          break;
+    try {
+      const resp = await fetch(`https://downloads.arduino.cc/libraries/logs/github.com/${r.github}/`, {
+        headers: { 'User-Agent': 'diorepo-cli' }
+      });
+      if (resp.ok) {
+        const text = await resp.text();
+        const matches = [...text.matchAll(/Release .+?:([\d.]+) already loaded/g)];
+        if (matches.length > 0) {
+          const versions = matches.map(m => m[1]);
+          versions.sort((a, b) => {
+            const pa = a.split('.').map(Number), pb = b.split('.').map(Number);
+            for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+              if ((pa[i] || 0) !== (pb[i] || 0)) return (pa[i] || 0) - (pb[i] || 0);
+            }
+            return 0;
+          });
+          r.arduinoVersion = versions[versions.length - 1];
         }
-      } catch { /* try next branch */ }
-    }
+      }
+    } catch { /* unavailable */ }
   }));
 
   // Issue counts via search API (excludes PRs, sequential to avoid rate limit)
