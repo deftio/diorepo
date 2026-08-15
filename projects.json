@@ -1,0 +1,27 @@
+{
+  "owner": "deftio",
+  "_comment": "Single source of truth for both diorepo.js (CLI) and index.html (dashboard). Registry fields are explicit and opt-in: a project is only looked up on a registry it actually publishes to. Omitting a field means 'not published there' and skips the network call. Set 'arduino': true for libraries in the Arduino Library Manager (keyed off the GitHub repo, not a package name).",
+  "projects": [
+    { "name": "bitwrench",    "github": "deftio/bitwrench",    "npm": "bitwrench" },
+    { "name": "fr_math",      "github": "deftio/fr_math",      "platformio": "fr_math", "espressif": "fr_math", "arduino": true },
+    { "name": "qf_math",      "github": "deftio/qf_math",      "platformio": "qf_math", "espressif": "qf_math", "arduino": true },
+    { "name": "companders",   "github": "deftio/companders" },
+    { "name": "quikdown",     "github": "deftio/quikdown",     "npm": "quikdown" },
+    { "name": "quikchat",     "github": "deftio/quikchat",     "npm": "quikchat" },
+    { "name": "quikleaf",     "github": "deftio/quikleaf",     "npm": "quikleaf" },
+    { "name": "xelp",         "github": "deftio/xelp",         "platformio": "xelp", "espressif": "xelp", "arduino": true },
+    { "name": "triepack",     "github": "deftio/triepack" },
+    { "name": "triops",       "github": "deftio/triops" },
+    { "name": "jsonvice",     "github": "deftio/jsonvice",     "pypi": "jsonvice" },
+    { "name": "html-to-docx", "github": "deftio/html-to-docx" },
+    { "name": "simpleJSLib",  "github": "deftio/simpleJSLib" },
+    { "name": "jado",         "github": "deftio/jado",         "npm": "jado" },
+    { "name": "webwrench",    "github": "deftio/webwrench",    "pypi": "webwrench" },
+    { "name": "pocketdock",   "github": "deftio/pocketdock",   "pypi": "pocketdock" },
+    { "name": "MirrorMirror", "github": "deftio/MirrorMirror" },
+    { "name": "WebAudioSpectrum", "github": "deftio/WebAudioSpectrum" },
+    { "name": "web-audio-latency-tester", "github": "deftio/web-audio-latency-tester" },
+    { "name": "provisional-patent-template", "github": "deftio/provisional-patent-template" },
+    { "name": "C-and-Cpp-Tests-with-CI-CD-Example", "github": "deftio/C-and-Cpp-Tests-with-CI-CD-Example" }
+  ]
+}

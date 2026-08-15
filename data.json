@@ -1,0 +1,865 @@
+{
+  "generated": "2026-08-15T13:42:00.178Z",
+  "projects": [
+    {
+      "project": "bitwrench",
+      "github": "deftio/bitwrench",
+      "description": "bitwrench is a javascript front end and ui library which provides updates, components, and works with zero dependancies",
+      "language": "JavaScript",
+      "stars": 8,
+      "contributors": 2,
+      "open_issues": 3,
+      "total_issues": 13,
+      "downloads": 730,
+      "npm_downloads": 730,
+      "pypi_downloads": 0,
+      "npm": "2.1.6",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v2.1.6",
+      "packages": {
+        "npm": "bitwrench",
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v2.1.6",
+          "published_at": "2026-08-09T06:43:50Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.6"
+        },
+        {
+          "tag_name": "v2.1.5",
+          "published_at": "2026-08-04T05:53:53Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.5"
+        },
+        {
+          "tag_name": "v2.1.4",
+          "published_at": "2026-08-03T17:00:53Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.4"
+        },
+        {
+          "tag_name": "v2.1.3",
+          "published_at": "2026-07-21T14:14:40Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.3"
+        },
+        {
+          "tag_name": "v2.1.2",
+          "published_at": "2026-07-16T09:48:50Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.2"
+        }
+      ],
+      "recent_issues": [
+        {
+          "number": 92,
+          "title": "Warn on unrecognised option keys in component factories (DX)",
+          "html_url": "https://github.com/deftio/bitwrench/issues/92"
+        },
+        {
+          "number": 91,
+          "title": "Embedded registry packaging: Arduino, PlatformIO, Espressif Component Registry",
+          "html_url": "https://github.com/deftio/bitwrench/issues/91"
+        },
+        {
+          "number": 80,
+          "title": "bwserve: server-side screenshot without browser client",
+          "html_url": "https://github.com/deftio/bitwrench/issues/80"
+        }
+      ]
+    },
+    {
+      "project": "fr_math",
+      "github": "deftio/fr_math",
+      "description": "Fixed-point math library (integer / no FPU)  for embedded C.  Trig, log/exp, sqrt, 2D transforms, wave generators, ADSR and variable radix support.  ~4.5 KB ",
+      "language": "C++",
+      "stars": 43,
+      "contributors": 4,
+      "open_issues": 0,
+      "total_issues": 3,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "2.0.9",
+      "platformio": "2.0.9",
+      "espressif": "2.0.9",
+      "github_tag": "v2.0.9",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": "fr_math",
+        "espressif": "fr_math"
+      },
+      "releases": [
+        {
+          "tag_name": "v2.0.9",
+          "published_at": "2026-07-21T01:18:12Z",
+          "html_url": "https://github.com/deftio/fr_math/releases/tag/v2.0.9"
+        },
+        {
+          "tag_name": "v2.0.8",
+          "published_at": "2026-05-05T02:51:47Z",
+          "html_url": "https://github.com/deftio/fr_math/releases/tag/v2.0.8"
+        },
+        {
+          "tag_name": "v2.0.7",
+          "published_at": "2026-04-26T21:02:22Z",
+          "html_url": "https://github.com/deftio/fr_math/releases/tag/v2.0.7"
+        },
+        {
+          "tag_name": "v2.0.6",
+          "published_at": "2026-04-25T17:40:58Z",
+          "html_url": "https://github.com/deftio/fr_math/releases/tag/v2.0.6"
+        },
+        {
+          "tag_name": "v2.0.5",
+          "published_at": "2026-04-20T06:58:33Z",
+          "html_url": "https://github.com/deftio/fr_math/releases/tag/v2.0.5"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "qf_math",
+      "github": "deftio/qf_math",
+      "description": "Fast math library (float 32) for embedded systems.  fast sin/cos/tan/asin/acos/atan (rad, degree, bam support) also exp,log,ln,pow,pow10, wave-gen, adsr.  Same API as fixed point library deftio/fr_math",
+      "language": "C",
+      "stars": 6,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "1.0.1",
+      "platformio": "1.0.1",
+      "espressif": "1.0.1",
+      "github_tag": "v1.0.1",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": "qf_math",
+        "espressif": "qf_math"
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.1",
+          "published_at": "2026-05-09T20:16:14Z",
+          "html_url": "https://github.com/deftio/qf_math/releases/tag/v1.0.1"
+        },
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-05-09T09:12:29Z",
+          "html_url": "https://github.com/deftio/qf_math/releases/tag/v1.0.0"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "companders",
+      "github": "deftio/companders",
+      "description": "Audio compression using companders (integer implementation, A-Law, Mu-Law) for embedded micros with IIR fixed-radix averager",
+      "language": "C",
+      "stars": 30,
+      "contributors": 2,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.0.6",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.6",
+          "published_at": "2024-08-09T02:51:55Z",
+          "html_url": "https://github.com/deftio/companders/releases/tag/v1.0.6"
+        },
+        {
+          "tag_name": "1.0.5",
+          "published_at": "2024-05-31T05:58:12Z",
+          "html_url": "https://github.com/deftio/companders/releases/tag/1.0.5"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "quikdown",
+      "github": "deftio/quikdown",
+      "description": "Fast, secure markdown parser with bidirectional HTML conversion, plugin system, and live editor.    Zero dependencies, XSS-safe by default.  ~17KB core / 100KB editor.",
+      "language": "JavaScript",
+      "stars": 15,
+      "contributors": 2,
+      "open_issues": 0,
+      "total_issues": 3,
+      "downloads": 297,
+      "npm_downloads": 297,
+      "pypi_downloads": 0,
+      "npm": "1.2.21",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.2.21",
+      "packages": {
+        "npm": "quikdown",
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.5",
+          "published_at": "2025-08-21T04:04:14Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/untagged-f27a0469f38a98564c31"
+        },
+        {
+          "tag_name": "v1.0.3",
+          "published_at": "2025-08-17T11:14:34Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/untagged-1433e53473a4cede8baa"
+        },
+        {
+          "tag_name": "v1.2.21",
+          "published_at": "2026-06-20T05:58:35Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.21"
+        },
+        {
+          "tag_name": "v1.2.20",
+          "published_at": "2026-06-18T04:46:38Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.20"
+        },
+        {
+          "tag_name": "v1.2.19",
+          "published_at": "2026-06-14T13:03:53Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.19"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "quikchat",
+      "github": "deftio/quikchat",
+      "description": "Simple purejs chat component for LLMs.",
+      "language": "JavaScript",
+      "stars": 21,
+      "contributors": 2,
+      "open_issues": 0,
+      "total_issues": 2,
+      "downloads": 156,
+      "npm_downloads": 156,
+      "pypi_downloads": 0,
+      "npm": "1.2.8",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.2.8",
+      "packages": {
+        "npm": "quikchat",
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.2.8",
+          "published_at": "2026-07-30T07:59:58Z",
+          "html_url": "https://github.com/deftio/quikchat/releases/tag/v1.2.8"
+        },
+        {
+          "tag_name": "v1.2.7",
+          "published_at": "2026-05-04T04:21:13Z",
+          "html_url": "https://github.com/deftio/quikchat/releases/tag/v1.2.7"
+        },
+        {
+          "tag_name": "v1.2.6",
+          "published_at": "2026-04-18T18:18:09Z",
+          "html_url": "https://github.com/deftio/quikchat/releases/tag/v1.2.6"
+        },
+        {
+          "tag_name": "v1.2.5",
+          "published_at": "2026-04-17T23:03:40Z",
+          "html_url": "https://github.com/deftio/quikchat/releases/tag/v1.2.5"
+        },
+        {
+          "tag_name": "v1.2.4",
+          "published_at": "2026-04-04T21:06:58Z",
+          "html_url": "https://github.com/deftio/quikchat/releases/tag/v1.2.4"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "quikleaf",
+      "github": "deftio/quikleaf",
+      "description": "quikleaf is a standalone markdown editor / assistant / cli with llm tooling based on quikdown.",
+      "language": "TypeScript",
+      "stars": 0,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": 8,
+      "npm_downloads": 8,
+      "pypi_downloads": 0,
+      "npm": "1.0.3",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.0.3",
+      "packages": {
+        "npm": "quikleaf",
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.3",
+          "published_at": "2026-06-26T06:15:45Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.0.3"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "xelp",
+      "github": "deftio/xelp",
+      "description": "xelp is a tiny cli for embedded processors in pure C with no dependancies.  It supports programmer provided functions and is ROM-able and scriptable and has built-in help.",
+      "language": "C",
+      "stars": 6,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 1,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "0.3.0",
+      "platformio": "0.3.5",
+      "espressif": "0.3.5",
+      "github_tag": "v0.3.5",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": "xelp",
+        "espressif": "xelp"
+      },
+      "releases": [
+        {
+          "tag_name": "v0.3.5",
+          "published_at": "2026-08-01T10:13:47Z",
+          "html_url": "https://github.com/deftio/xelp/releases/tag/v0.3.5"
+        },
+        {
+          "tag_name": "v0.3.4",
+          "published_at": "2026-08-01T09:06:44Z",
+          "html_url": "https://github.com/deftio/xelp/releases/tag/v0.3.4"
+        },
+        {
+          "tag_name": "v0.3.3",
+          "published_at": "2026-05-16T05:38:12Z",
+          "html_url": "https://github.com/deftio/xelp/releases/tag/v0.3.3"
+        },
+        {
+          "tag_name": "v0.3.2",
+          "published_at": "2026-05-11T11:28:20Z",
+          "html_url": "https://github.com/deftio/xelp/releases/tag/v0.3.2"
+        },
+        {
+          "tag_name": "v0.3.1",
+          "published_at": "2026-04-26T06:53:49Z",
+          "html_url": "https://github.com/deftio/xelp/releases/tag/v0.3.1"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "triepack",
+      "github": "deftio/triepack",
+      "description": "Embedded compression library",
+      "language": "C",
+      "stars": 1,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.1.0",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.1.0",
+          "published_at": "2026-03-07T01:16:58Z",
+          "html_url": "https://github.com/deftio/triepack/releases/tag/v1.1.0"
+        },
+        {
+          "tag_name": "v1.0.7",
+          "published_at": "2026-03-05T06:11:45Z",
+          "html_url": "https://github.com/deftio/triepack/releases/tag/v1.0.7"
+        },
+        {
+          "tag_name": "v1.0.6",
+          "published_at": "2026-03-03T05:36:56Z",
+          "html_url": "https://github.com/deftio/triepack/releases/tag/v1.0.6"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "triops",
+      "github": "deftio/triops",
+      "description": "A small PHP server for debugging IoT devices: raw bytes, headers, timing. Unzip and go!   Can be used on shared hosts.",
+      "language": "PHP",
+      "stars": 2,
+      "contributors": 2,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v0.2.2",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v0.2.2",
+          "published_at": "2026-08-01T10:19:15Z",
+          "html_url": "https://github.com/deftio/triops/releases/tag/v0.2.2"
+        },
+        {
+          "tag_name": "v0.2.1",
+          "published_at": "2026-07-30T01:34:01Z",
+          "html_url": "https://github.com/deftio/triops/releases/tag/v0.2.1"
+        },
+        {
+          "tag_name": "v0.2.0",
+          "published_at": "2026-07-28T07:01:41Z",
+          "html_url": "https://github.com/deftio/triops/releases/tag/v0.2.0"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "jsonvice",
+      "github": "deftio/jsonvice",
+      "description": "json minifier with ability to truncate precision of floating point numbers",
+      "language": "Python",
+      "stars": 3,
+      "contributors": 2,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": 6,
+      "npm_downloads": 0,
+      "pypi_downloads": 6,
+      "npm": "—",
+      "pypi": "1.0.2",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.0.1",
+      "packages": {
+        "npm": null,
+        "pypi": "jsonvice",
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.1",
+          "published_at": "2022-01-23T19:53:19Z",
+          "html_url": "https://github.com/deftio/jsonvice/releases/tag/v1.0.1"
+        },
+        {
+          "tag_name": "v0.1.2",
+          "published_at": "2022-01-22T23:18:43Z",
+          "html_url": "https://github.com/deftio/jsonvice/releases/tag/v0.1.2"
+        },
+        {
+          "tag_name": "v0.1.1",
+          "published_at": "2022-01-21T22:56:51Z",
+          "html_url": "https://github.com/deftio/jsonvice/releases/tag/v0.1.1"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "html-to-docx",
+      "github": "deftio/html-to-docx",
+      "description": "Example usage of the js docx library to convert an html div to a docx document.",
+      "language": "HTML",
+      "stars": 3,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "—",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [],
+      "recent_issues": []
+    },
+    {
+      "project": "simpleJSLib",
+      "github": "deftio/simpleJSLib",
+      "description": "Simple Javascript library example which runs in browser / nodejs / commonjs and AMD environments.  This library not require a build tool.",
+      "language": "JavaScript",
+      "stars": 2,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "—",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [],
+      "recent_issues": []
+    },
+    {
+      "project": "jado",
+      "github": "deftio/jado",
+      "description": "JADO is a javascript mini library which treats any object as an interable.  This includes built-in singleton types like ints, floats, and dates. It also brings map/filter/reduce to all types (including objects and singletons).",
+      "language": "JavaScript",
+      "stars": 2,
+      "contributors": 4,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": 5,
+      "npm_downloads": 5,
+      "pypi_downloads": 0,
+      "npm": "1.0.9",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.0.9",
+      "packages": {
+        "npm": "jado",
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.9",
+          "published_at": "2025-08-25T02:15:45Z",
+          "html_url": "https://github.com/deftio/jado/releases/tag/v1.0.9"
+        },
+        {
+          "tag_name": "v1.0.8",
+          "published_at": "2025-08-25T00:33:29Z",
+          "html_url": "https://github.com/deftio/jado/releases/tag/v1.0.8"
+        },
+        {
+          "tag_name": "v1.0.7",
+          "published_at": "2025-08-24T21:39:43Z",
+          "html_url": "https://github.com/deftio/jado/releases/tag/v1.0.7"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "webwrench",
+      "github": "deftio/webwrench",
+      "description": "",
+      "language": "Python",
+      "stars": 0,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "0.1.2",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v0.1.2",
+      "packages": {
+        "npm": null,
+        "pypi": "webwrench",
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v0.1.2",
+          "published_at": "2026-03-29T07:43:32Z",
+          "html_url": "https://github.com/deftio/webwrench/releases/tag/v0.1.2"
+        },
+        {
+          "tag_name": "v0.1.1",
+          "published_at": "2026-03-29T07:06:17Z",
+          "html_url": "https://github.com/deftio/webwrench/releases/tag/v0.1.1"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "pocketdock",
+      "github": "deftio/pocketdock",
+      "description": "a docker / podman  sandbox for coding agents and experiments with cli, python api, logging, and simple commands.",
+      "language": "Python",
+      "stars": 1,
+      "contributors": 1,
+      "open_issues": 1,
+      "total_issues": 4,
+      "downloads": 8,
+      "npm_downloads": 0,
+      "pypi_downloads": 8,
+      "npm": "—",
+      "pypi": "1.2.6",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.2.6",
+      "packages": {
+        "npm": null,
+        "pypi": "pocketdock",
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.2.6",
+          "published_at": "2026-02-18T17:56:15Z",
+          "html_url": "https://github.com/deftio/pocketdock/releases/tag/v1.2.6"
+        },
+        {
+          "tag_name": "v1.2.5",
+          "published_at": "2026-02-18T16:20:52Z",
+          "html_url": "https://github.com/deftio/pocketdock/releases/tag/v1.2.5"
+        },
+        {
+          "tag_name": "v1.2.4",
+          "published_at": "2026-02-18T08:51:49Z",
+          "html_url": "https://github.com/deftio/pocketdock/releases/tag/v1.2.4"
+        },
+        {
+          "tag_name": "v1.2.3",
+          "published_at": "2026-02-18T08:20:37Z",
+          "html_url": "https://github.com/deftio/pocketdock/releases/tag/v1.2.3"
+        },
+        {
+          "tag_name": "v1.2.2",
+          "published_at": "2026-02-18T07:44:16Z",
+          "html_url": "https://github.com/deftio/pocketdock/releases/tag/v1.2.2"
+        }
+      ],
+      "recent_issues": [
+        {
+          "number": 16,
+          "title": "feat: interactive LLM-powered agent REPL (pocketdock agent)",
+          "html_url": "https://github.com/deftio/pocketdock/issues/16"
+        }
+      ]
+    },
+    {
+      "project": "MirrorMirror",
+      "github": "deftio/MirrorMirror",
+      "description": "A single page HTML and pure JS app that creates an infinity mirror, edge detection and runs on mobile & desktop.. ",
+      "language": "HTML",
+      "stars": 1,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.0.0",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2024-05-25T04:37:17Z",
+          "html_url": "https://github.com/deftio/MirrorMirror/releases/tag/v1.0.0"
+        }
+      ],
+      "recent_issues": []
+    },
+    {
+      "project": "WebAudioSpectrum",
+      "github": "deftio/WebAudioSpectrum",
+      "description": "Realtime Audio Spectrum and Spectrogram visualizer using browser access to microphone and pure JS",
+      "language": "JavaScript",
+      "stars": 25,
+      "contributors": 2,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "—",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [],
+      "recent_issues": []
+    },
+    {
+      "project": "web-audio-latency-tester",
+      "github": "deftio/web-audio-latency-tester",
+      "description": "Tap to the beat and find out the average latency of your audio connection.  Estimate the delay in your wireless headphones or audio.",
+      "language": "HTML",
+      "stars": 3,
+      "contributors": 1,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "—",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [],
+      "recent_issues": []
+    },
+    {
+      "project": "provisional-patent-template",
+      "github": "deftio/provisional-patent-template",
+      "description": "A free US provisional patent template used to generate dozens of granted patents and as the basis for WIPO (international filings), with overview and examples.",
+      "language": "HTML",
+      "stars": 66,
+      "contributors": 3,
+      "open_issues": 0,
+      "total_issues": 0,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "—",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [],
+      "recent_issues": []
+    },
+    {
+      "project": "C-and-Cpp-Tests-with-CI-CD-Example",
+      "github": "deftio/C-and-Cpp-Tests-with-CI-CD-Example",
+      "description": "C/C++ example project for CI testing with Github Actions, Coverage, and Build badges",
+      "language": "C",
+      "stars": 53,
+      "contributors": 2,
+      "open_issues": 0,
+      "total_issues": 2,
+      "downloads": "—",
+      "npm_downloads": 0,
+      "pypi_downloads": 0,
+      "npm": "—",
+      "pypi": "—",
+      "arduino": "—",
+      "platformio": "—",
+      "espressif": "—",
+      "github_tag": "v1.0.3",
+      "packages": {
+        "npm": null,
+        "pypi": null,
+        "platformio": null,
+        "espressif": null
+      },
+      "releases": [
+        {
+          "tag_name": "v1.0.3",
+          "published_at": "2024-08-08T04:35:15Z",
+          "html_url": "https://github.com/deftio/C-and-Cpp-Tests-with-CI-CD-Example/releases/tag/v1.0.3"
+        }
+      ],
+      "recent_issues": []
+    }
+  ]
+}

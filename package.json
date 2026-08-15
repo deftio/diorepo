@@ -7,7 +7,9 @@
     "diorepo": "./diorepo.js"
   },
   "scripts": {
-    "start": "node diorepo.js"
+    "start": "node diorepo.js",
+    "refresh": "node diorepo.js --format json --output data.json",
+    "serve": "python3 -m http.server 8080"
   },
   "keywords": ["dashboard", "github", "npm", "pypi", "deftio"],
   "author": "deftio",

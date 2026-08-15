@@ -1,17 +1,25 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Refreshes data.json from the registries and deploys the dashboard to Pages.
+#
+# The refresh runs on a schedule (and on demand), not on every push, so ordinary
+# code pushes deploy immediately without spending API calls. The refresh and the
+# deploy live in one job on purpose: a commit pushed with GITHUB_TOKEN does not
+# trigger other workflows, so a separate deploy workflow would never see it.
+name: Refresh data and deploy to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Deploy whatever is on main when it changes
   push:
     branches: ["main"]
+
+  # Refresh the metrics snapshot weekly (Mondays, 06:17 UTC)
+  schedule:
+    - cron: "17 6 * * 1"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write   # needed to commit the refreshed data.json
   pages: write
   id-token: write
 
@@ -22,8 +30,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
+  refresh-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -31,6 +38,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        if: github.event_name != 'push'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Refresh data.json
+        if: github.event_name != 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node diorepo.js --format json --output data.json
+
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "No metric changes."
+          else
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data.json
+            git commit -m "chore: refresh dashboard data"
+            git push
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
