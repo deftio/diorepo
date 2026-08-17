@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15T13:42:00.178Z",
+  "generated": "2026-08-17T06:28:59.143Z",
   "projects": [
     {
       "project": "bitwrench",
@@ -10,15 +10,15 @@
       "contributors": 2,
       "open_issues": 3,
       "total_issues": 13,
-      "downloads": 730,
-      "npm_downloads": 730,
+      "downloads": 413,
+      "npm_downloads": 413,
       "pypi_downloads": 0,
-      "npm": "2.1.6",
+      "npm": "2.1.7",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v2.1.6",
+      "github_tag": "v2.1.7",
       "packages": {
         "npm": "bitwrench",
         "pypi": null,
@@ -26,6 +26,11 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v2.1.7",
+          "published_at": "2026-08-16T06:39:16Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.7"
+        },
         {
           "tag_name": "v2.1.6",
           "published_at": "2026-08-09T06:43:50Z",
@@ -45,11 +50,6 @@
           "tag_name": "v2.1.3",
           "published_at": "2026-07-21T14:14:40Z",
           "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.3"
-        },
-        {
-          "tag_name": "v2.1.2",
-          "published_at": "2026-07-16T09:48:50Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.2"
         }
       ],
       "recent_issues": [
@@ -208,8 +208,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 3,
-      "downloads": 297,
-      "npm_downloads": 297,
+      "downloads": 130,
+      "npm_downloads": 130,
       "pypi_downloads": 0,
       "npm": "1.2.21",
       "pypi": "—",
@@ -225,16 +225,6 @@
       },
       "releases": [
         {
-          "tag_name": "v1.0.5",
-          "published_at": "2025-08-21T04:04:14Z",
-          "html_url": "https://github.com/deftio/quikdown/releases/tag/untagged-f27a0469f38a98564c31"
-        },
-        {
-          "tag_name": "v1.0.3",
-          "published_at": "2025-08-17T11:14:34Z",
-          "html_url": "https://github.com/deftio/quikdown/releases/tag/untagged-1433e53473a4cede8baa"
-        },
-        {
           "tag_name": "v1.2.21",
           "published_at": "2026-06-20T05:58:35Z",
           "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.21"
@@ -248,6 +238,16 @@
           "tag_name": "v1.2.19",
           "published_at": "2026-06-14T13:03:53Z",
           "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.19"
+        },
+        {
+          "tag_name": "v1.2.17",
+          "published_at": "2026-05-31T16:41:28Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.17"
+        },
+        {
+          "tag_name": "v1.2.16",
+          "published_at": "2026-05-25T07:29:18Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.16"
         }
       ],
       "recent_issues": []
@@ -261,8 +261,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 2,
-      "downloads": 156,
-      "npm_downloads": 156,
+      "downloads": 135,
+      "npm_downloads": 135,
       "pypi_downloads": 0,
       "npm": "1.2.8",
       "pypi": "—",
@@ -314,8 +314,8 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 8,
-      "npm_downloads": 8,
+      "downloads": 6,
+      "npm_downloads": 6,
       "pypi_downloads": 0,
       "npm": "1.0.3",
       "pypi": "—",
@@ -486,9 +486,9 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 6,
+      "downloads": 3,
       "npm_downloads": 0,
-      "pypi_downloads": 6,
+      "pypi_downloads": 3,
       "npm": "—",
       "pypi": "1.0.2",
       "arduino": "—",
@@ -583,8 +583,8 @@
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 5,
-      "npm_downloads": 5,
+      "downloads": 6,
+      "npm_downloads": 6,
       "pypi_downloads": 0,
       "npm": "1.0.9",
       "pypi": "—",
@@ -626,9 +626,9 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": "—",
+      "downloads": 1,
       "npm_downloads": 0,
-      "pypi_downloads": 0,
+      "pypi_downloads": 1,
       "npm": "—",
       "pypi": "0.1.2",
       "arduino": "—",
@@ -664,9 +664,9 @@
       "contributors": 1,
       "open_issues": 1,
       "total_issues": 4,
-      "downloads": 8,
+      "downloads": 2,
       "npm_downloads": 0,
-      "pypi_downloads": 8,
+      "pypi_downloads": 2,
       "npm": "—",
       "pypi": "1.2.6",
       "arduino": "—",
