@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T06:52:00.813Z",
+  "generated": "2026-09-21T06:52:52.530Z",
   "projects": [
     {
       "project": "bitwrench",
@@ -8,10 +8,10 @@
       "language": "JavaScript",
       "stars": 8,
       "contributors": 2,
-      "open_issues": 4,
-      "total_issues": 14,
-      "downloads": 109,
-      "npm_downloads": 109,
+      "open_issues": 11,
+      "total_issues": 21,
+      "downloads": 108,
+      "npm_downloads": 108,
       "pypi_downloads": 0,
       "npm": "2.1.7",
       "pypi": "—",
@@ -54,24 +54,29 @@
       ],
       "recent_issues": [
         {
-          "number": 98,
-          "title": "makeTable: sorting replaces render()ed cells with [object Object]",
-          "html_url": "https://github.com/deftio/bitwrench/issues/98"
+          "number": 107,
+          "title": "bwcli serve/attach: client.screenshot is not a function — BwServeClient never defines the screenshot() wrapper",
+          "html_url": "https://github.com/deftio/bitwrench/issues/107"
         },
         {
-          "number": 92,
-          "title": "Warn on unrecognised option keys in component factories (DX)",
-          "html_url": "https://github.com/deftio/bitwrench/issues/92"
+          "number": 106,
+          "title": "makeTabs: add a tab-change callback (onTabChange) — no way to react to tab switches without reading _bw_state",
+          "html_url": "https://github.com/deftio/bitwrench/issues/106"
         },
         {
-          "number": 91,
-          "title": "Embedded registry packaging: Arduino, PlatformIO, Espressif Component Registry",
-          "html_url": "https://github.com/deftio/bitwrench/issues/91"
+          "number": 105,
+          "title": "bw.mount/bw.create stringify nested arrays in content (\"[object Object]\") while bw.html flattens them — breaks makeAlert({ content: [...] })",
+          "html_url": "https://github.com/deftio/bitwrench/issues/105"
         },
         {
-          "number": 80,
-          "title": "bwserve: server-side screenshot without browser client",
-          "html_url": "https://github.com/deftio/bitwrench/issues/80"
+          "number": 104,
+          "title": "Grid gutters don't work: column padding rule targets Bootstrap .col/[class*=\"col-\"], and makeRow gap classes bw_g_1..5 mostly don't exist",
+          "html_url": "https://github.com/deftio/bitwrench/issues/104"
+        },
+        {
+          "number": 103,
+          "title": "Grid: makeCol responsive sizes never apply when xs is set — base .bw_col_N rules emitted after @media breakpoints (shallow merge in getStructuralCSS)",
+          "html_url": "https://github.com/deftio/bitwrench/issues/103"
         }
       ]
     },
@@ -209,12 +214,12 @@
       "github": "deftio/quikdown",
       "description": "Fast, secure markdown parser with bidirectional HTML conversion, plugin system, and live editor.    Zero dependencies, XSS-safe by default.  ~17KB core / 100KB editor.",
       "language": "JavaScript",
-      "stars": 15,
+      "stars": 16,
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 3,
-      "downloads": 227,
-      "npm_downloads": 227,
+      "downloads": 562,
+      "npm_downloads": 562,
       "pypi_downloads": 0,
       "npm": "1.2.21",
       "pypi": "—",
@@ -266,8 +271,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 2,
-      "downloads": 74,
-      "npm_downloads": 74,
+      "downloads": 118,
+      "npm_downloads": 118,
       "pypi_downloads": 0,
       "npm": "1.2.8",
       "pypi": "—",
@@ -319,8 +324,8 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 6,
-      "npm_downloads": 6,
+      "downloads": 5,
+      "npm_downloads": 5,
       "pypi_downloads": 0,
       "npm": "1.0.3",
       "pypi": "—",
@@ -348,7 +353,7 @@
       "github": "deftio/xelp",
       "description": "xelp is a tiny cli for embedded processors in pure C with no dependancies.  It supports programmer provided functions and is ROM-able and scriptable and has built-in help.",
       "language": "C",
-      "stars": 6,
+      "stars": 7,
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 1,
@@ -404,7 +409,7 @@
       "stars": 1,
       "contributors": 1,
       "open_issues": 0,
-      "total_issues": 0,
+      "total_issues": 1,
       "downloads": "—",
       "npm_downloads": 0,
       "pypi_downloads": 0,
@@ -413,7 +418,7 @@
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v1.1.0",
+      "github_tag": "v2.0.0",
       "packages": {
         "npm": null,
         "pypi": null,
@@ -421,6 +426,21 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v2.0.0",
+          "published_at": "2026-09-19T21:46:58Z",
+          "html_url": "https://github.com/deftio/triepack/releases/tag/v2.0.0"
+        },
+        {
+          "tag_name": "v1.3.2",
+          "published_at": "2026-09-17T23:00:56Z",
+          "html_url": "https://github.com/deftio/triepack/releases/tag/v1.3.2"
+        },
+        {
+          "tag_name": "v1.3.1",
+          "published_at": "2026-09-16T17:54:13Z",
+          "html_url": "https://github.com/deftio/triepack/releases/tag/v1.3.1"
+        },
         {
           "tag_name": "v1.1.0",
           "published_at": "2026-03-07T01:16:58Z",
@@ -430,11 +450,6 @@
           "tag_name": "v1.0.7",
           "published_at": "2026-03-05T06:11:45Z",
           "html_url": "https://github.com/deftio/triepack/releases/tag/v1.0.7"
-        },
-        {
-          "tag_name": "v1.0.6",
-          "published_at": "2026-03-03T05:36:56Z",
-          "html_url": "https://github.com/deftio/triepack/releases/tag/v1.0.6"
         }
       ],
       "recent_issues": []
@@ -491,9 +506,9 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 1,
+      "downloads": 3,
       "npm_downloads": 0,
-      "pypi_downloads": 1,
+      "pypi_downloads": 3,
       "npm": "—",
       "pypi": "1.0.2",
       "arduino": "—",
@@ -588,8 +603,8 @@
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 14,
-      "npm_downloads": 14,
+      "downloads": 8,
+      "npm_downloads": 8,
       "pypi_downloads": 0,
       "npm": "1.0.9",
       "pypi": "—",
