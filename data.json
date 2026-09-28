@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T06:52:52.530Z",
+  "generated": "2026-09-28T06:57:02.715Z",
   "projects": [
     {
       "project": "bitwrench",
@@ -8,17 +8,17 @@
       "language": "JavaScript",
       "stars": 8,
       "contributors": 2,
-      "open_issues": 11,
-      "total_issues": 21,
-      "downloads": 108,
-      "npm_downloads": 108,
+      "open_issues": 12,
+      "total_issues": 22,
+      "downloads": 568,
+      "npm_downloads": 568,
       "pypi_downloads": 0,
-      "npm": "2.1.7",
+      "npm": "2.1.10",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v2.1.7",
+      "github_tag": "v2.1.10",
       "packages": {
         "npm": "bitwrench",
         "pypi": null,
@@ -26,6 +26,21 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v2.1.10",
+          "published_at": "2026-09-24T02:19:55Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.10"
+        },
+        {
+          "tag_name": "v2.1.9",
+          "published_at": "2026-09-23T02:22:45Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.9"
+        },
+        {
+          "tag_name": "v2.1.8",
+          "published_at": "2026-09-21T21:23:46Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.8"
+        },
         {
           "tag_name": "v2.1.7",
           "published_at": "2026-08-16T06:39:16Z",
@@ -35,24 +50,14 @@
           "tag_name": "v2.1.6",
           "published_at": "2026-08-09T06:43:50Z",
           "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.6"
-        },
-        {
-          "tag_name": "v2.1.5",
-          "published_at": "2026-08-04T05:53:53Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.5"
-        },
-        {
-          "tag_name": "v2.1.4",
-          "published_at": "2026-08-03T17:00:53Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.4"
-        },
-        {
-          "tag_name": "v2.1.3",
-          "published_at": "2026-07-21T14:14:40Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.3"
         }
       ],
       "recent_issues": [
+        {
+          "number": 108,
+          "title": "Feedback from jazzmac: docs gaps, packaging, nested-children flattening, small feature requests",
+          "html_url": "https://github.com/deftio/bitwrench/issues/108"
+        },
         {
           "number": 107,
           "title": "bwcli serve/attach: client.screenshot is not a function — BwServeClient never defines the screenshot() wrapper",
@@ -72,11 +77,6 @@
           "number": 104,
           "title": "Grid gutters don't work: column padding rule targets Bootstrap .col/[class*=\"col-\"], and makeRow gap classes bw_g_1..5 mostly don't exist",
           "html_url": "https://github.com/deftio/bitwrench/issues/104"
-        },
-        {
-          "number": 103,
-          "title": "Grid: makeCol responsive sizes never apply when xs is set — base .bw_col_N rules emitted after @media breakpoints (shallow merge in getStructuralCSS)",
-          "html_url": "https://github.com/deftio/bitwrench/issues/103"
         }
       ]
     },
@@ -85,7 +85,7 @@
       "github": "deftio/fr_math",
       "description": "Fixed-point math library (integer / no FPU)  for embedded C.  Trig, log/exp, sqrt, 2D transforms, wave generators, ADSR and variable radix support.  ~4.5 KB ",
       "language": "C++",
-      "stars": 44,
+      "stars": 45,
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 3,
@@ -218,8 +218,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 3,
-      "downloads": 562,
-      "npm_downloads": 562,
+      "downloads": 792,
+      "npm_downloads": 792,
       "pypi_downloads": 0,
       "npm": "1.2.21",
       "pypi": "—",
@@ -271,8 +271,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 2,
-      "downloads": 118,
-      "npm_downloads": 118,
+      "downloads": 136,
+      "npm_downloads": 136,
       "pypi_downloads": 0,
       "npm": "1.2.8",
       "pypi": "—",
@@ -324,8 +324,8 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 5,
-      "npm_downloads": 5,
+      "downloads": 36,
+      "npm_downloads": 36,
       "pypi_downloads": 0,
       "npm": "1.0.3",
       "pypi": "—",
@@ -353,7 +353,7 @@
       "github": "deftio/xelp",
       "description": "xelp is a tiny cli for embedded processors in pure C with no dependancies.  It supports programmer provided functions and is ROM-able and scriptable and has built-in help.",
       "language": "C",
-      "stars": 7,
+      "stars": 8,
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 1,
@@ -506,9 +506,9 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 3,
+      "downloads": "—",
       "npm_downloads": 0,
-      "pypi_downloads": 3,
+      "pypi_downloads": 0,
       "npm": "—",
       "pypi": "1.0.2",
       "arduino": "—",
@@ -603,8 +603,8 @@
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 8,
-      "npm_downloads": 8,
+      "downloads": 11,
+      "npm_downloads": 11,
       "pypi_downloads": 0,
       "npm": "1.0.9",
       "pypi": "—",
@@ -646,9 +646,9 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": "—",
+      "downloads": 3,
       "npm_downloads": 0,
-      "pypi_downloads": 0,
+      "pypi_downloads": 3,
       "npm": "—",
       "pypi": "0.1.2",
       "arduino": "—",
@@ -684,9 +684,9 @@
       "contributors": 1,
       "open_issues": 1,
       "total_issues": 4,
-      "downloads": "—",
+      "downloads": 2,
       "npm_downloads": 0,
-      "pypi_downloads": 0,
+      "pypi_downloads": 2,
       "npm": "—",
       "pypi": "1.2.6",
       "arduino": "—",
