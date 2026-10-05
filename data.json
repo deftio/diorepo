@@ -1,24 +1,24 @@
 {
-  "generated": "2026-09-28T06:57:02.715Z",
+  "generated": "2026-10-05T07:02:26.664Z",
   "projects": [
     {
       "project": "bitwrench",
       "github": "deftio/bitwrench",
       "description": "bitwrench is a javascript front end and ui library which provides updates, components, and works with zero dependancies",
       "language": "JavaScript",
-      "stars": 8,
+      "stars": 9,
       "contributors": 2,
-      "open_issues": 12,
-      "total_issues": 22,
-      "downloads": 568,
-      "npm_downloads": 568,
+      "open_issues": 5,
+      "total_issues": 23,
+      "downloads": 126,
+      "npm_downloads": 126,
       "pypi_downloads": 0,
-      "npm": "2.1.10",
+      "npm": "2.1.11",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v2.1.10",
+      "github_tag": "v2.1.11",
       "packages": {
         "npm": "bitwrench",
         "pypi": null,
@@ -26,6 +26,11 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v2.1.11",
+          "published_at": "2026-10-04T21:15:19Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.11"
+        },
         {
           "tag_name": "v2.1.10",
           "published_at": "2026-09-24T02:19:55Z",
@@ -45,38 +50,33 @@
           "tag_name": "v2.1.7",
           "published_at": "2026-08-16T06:39:16Z",
           "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.7"
-        },
-        {
-          "tag_name": "v2.1.6",
-          "published_at": "2026-08-09T06:43:50Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.6"
         }
       ],
       "recent_issues": [
+        {
+          "number": 111,
+          "title": "Issue templates work, but community-profile API reports them missing (no action needed)",
+          "html_url": "https://github.com/deftio/bitwrench/issues/111"
+        },
         {
           "number": 108,
           "title": "Feedback from jazzmac: docs gaps, packaging, nested-children flattening, small feature requests",
           "html_url": "https://github.com/deftio/bitwrench/issues/108"
         },
         {
-          "number": 107,
-          "title": "bwcli serve/attach: client.screenshot is not a function — BwServeClient never defines the screenshot() wrapper",
-          "html_url": "https://github.com/deftio/bitwrench/issues/107"
+          "number": 92,
+          "title": "Warn on unrecognised option keys in component factories (DX)",
+          "html_url": "https://github.com/deftio/bitwrench/issues/92"
         },
         {
-          "number": 106,
-          "title": "makeTabs: add a tab-change callback (onTabChange) — no way to react to tab switches without reading _bw_state",
-          "html_url": "https://github.com/deftio/bitwrench/issues/106"
+          "number": 91,
+          "title": "Embedded registry packaging: Arduino, PlatformIO, Espressif Component Registry",
+          "html_url": "https://github.com/deftio/bitwrench/issues/91"
         },
         {
-          "number": 105,
-          "title": "bw.mount/bw.create stringify nested arrays in content (\"[object Object]\") while bw.html flattens them — breaks makeAlert({ content: [...] })",
-          "html_url": "https://github.com/deftio/bitwrench/issues/105"
-        },
-        {
-          "number": 104,
-          "title": "Grid gutters don't work: column padding rule targets Bootstrap .col/[class*=\"col-\"], and makeRow gap classes bw_g_1..5 mostly don't exist",
-          "html_url": "https://github.com/deftio/bitwrench/issues/104"
+          "number": 80,
+          "title": "bwserve: server-side screenshot without browser client",
+          "html_url": "https://github.com/deftio/bitwrench/issues/80"
         }
       ]
     },
@@ -218,8 +218,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 3,
-      "downloads": 792,
-      "npm_downloads": 792,
+      "downloads": 707,
+      "npm_downloads": 707,
       "pypi_downloads": 0,
       "npm": "1.2.21",
       "pypi": "—",
@@ -271,8 +271,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 2,
-      "downloads": 136,
-      "npm_downloads": 136,
+      "downloads": 134,
+      "npm_downloads": 134,
       "pypi_downloads": 0,
       "npm": "1.2.8",
       "pypi": "—",
@@ -324,8 +324,8 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 36,
-      "npm_downloads": 36,
+      "downloads": 8,
+      "npm_downloads": 8,
       "pypi_downloads": 0,
       "npm": "1.0.3",
       "pypi": "—",
@@ -506,9 +506,9 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": "—",
+      "downloads": 7,
       "npm_downloads": 0,
-      "pypi_downloads": 0,
+      "pypi_downloads": 7,
       "npm": "—",
       "pypi": "1.0.2",
       "arduino": "—",
@@ -603,8 +603,8 @@
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 11,
-      "npm_downloads": 11,
+      "downloads": 10,
+      "npm_downloads": 10,
       "pypi_downloads": 0,
       "npm": "1.0.9",
       "pypi": "—",
@@ -646,9 +646,9 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 3,
+      "downloads": 1,
       "npm_downloads": 0,
-      "pypi_downloads": 3,
+      "pypi_downloads": 1,
       "npm": "—",
       "pypi": "0.1.2",
       "arduino": "—",
@@ -684,9 +684,9 @@
       "contributors": 1,
       "open_issues": 1,
       "total_issues": 4,
-      "downloads": 2,
+      "downloads": "—",
       "npm_downloads": 0,
-      "pypi_downloads": 2,
+      "pypi_downloads": 0,
       "npm": "—",
       "pypi": "1.2.6",
       "arduino": "—",
