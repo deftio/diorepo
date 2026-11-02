@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T06:54:23.742Z",
+  "generated": "2026-11-02T06:35:35.902Z",
   "projects": [
     {
       "project": "bitwrench",
@@ -8,17 +8,17 @@
       "language": "JavaScript",
       "stars": 9,
       "contributors": 2,
-      "open_issues": 5,
-      "total_issues": 23,
-      "downloads": 35,
-      "npm_downloads": 35,
+      "open_issues": 12,
+      "total_issues": 30,
+      "downloads": 147,
+      "npm_downloads": 147,
       "pypi_downloads": 0,
-      "npm": "2.1.11",
+      "npm": "2.1.12",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v2.1.11",
+      "github_tag": "v2.1.12",
       "packages": {
         "npm": "bitwrench",
         "pypi": null,
@@ -26,6 +26,11 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v2.1.12",
+          "published_at": "2026-11-01T00:11:23Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.12"
+        },
         {
           "tag_name": "v2.1.11",
           "published_at": "2026-10-04T21:15:19Z",
@@ -45,38 +50,33 @@
           "tag_name": "v2.1.8",
           "published_at": "2026-09-21T21:23:46Z",
           "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.8"
-        },
-        {
-          "tag_name": "v2.1.7",
-          "published_at": "2026-08-16T06:39:16Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.7"
         }
       ],
       "recent_issues": [
         {
-          "number": 111,
-          "title": "Issue templates work, but community-profile API reports them missing (no action needed)",
-          "html_url": "https://github.com/deftio/bitwrench/issues/111"
+          "number": 118,
+          "title": "Slot setters render \"[object Object]\" for bw.raw() and arrays; only strings and a single TACO work",
+          "html_url": "https://github.com/deftio/bitwrench/issues/118"
         },
         {
-          "number": 108,
-          "title": "Feedback from jazzmac: docs gaps, packaging, nested-children flattening, small feature requests",
-          "html_url": "https://github.com/deftio/bitwrench/issues/108"
+          "number": 117,
+          "title": "bwcli attach --allow-screenshot fails cross-origin: html2canvas is fetched from the page's origin, not the attach server",
+          "html_url": "https://github.com/deftio/bitwrench/issues/117"
         },
         {
-          "number": 92,
-          "title": "Warn on unrecognised option keys in component factories (DX)",
-          "html_url": "https://github.com/deftio/bitwrench/issues/92"
+          "number": 116,
+          "title": "bwcli attach `/tree` prints `?`: the REPL passes the wire envelope, not the tree, to printTree (and cls vs classes)",
+          "html_url": "https://github.com/deftio/bitwrench/issues/116"
         },
         {
-          "number": 91,
-          "title": "Embedded registry packaging: Arduino, PlatformIO, Espressif Component Registry",
-          "html_url": "https://github.com/deftio/bitwrench/issues/91"
+          "number": 115,
+          "title": "No way to seed the alternate (dark) palette; luminance inversion turns a mid-lightness accent into near-black",
+          "html_url": "https://github.com/deftio/bitwrench/issues/115"
         },
         {
-          "number": 80,
-          "title": "bwserve: server-side screenshot without browser client",
-          "html_url": "https://github.com/deftio/bitwrench/issues/80"
+          "number": 114,
+          "title": "dist/bitwrench.d.ts BCCL config interfaces disagree with the factories; typed props are rejected at runtime",
+          "html_url": "https://github.com/deftio/bitwrench/issues/114"
         }
       ]
     },
@@ -218,8 +218,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 3,
-      "downloads": 1527,
-      "npm_downloads": 1527,
+      "downloads": 2263,
+      "npm_downloads": 2263,
       "pypi_downloads": 0,
       "npm": "1.2.21",
       "pypi": "—",
@@ -271,8 +271,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 2,
-      "downloads": 58,
-      "npm_downloads": 58,
+      "downloads": 177,
+      "npm_downloads": 177,
       "pypi_downloads": 0,
       "npm": "1.2.8",
       "pypi": "—",
@@ -324,15 +324,15 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 11,
-      "npm_downloads": 11,
+      "downloads": 16,
+      "npm_downloads": 16,
       "pypi_downloads": 0,
       "npm": "1.0.3",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v1.0.3",
+      "github_tag": "v1.2.1",
       "packages": {
         "npm": "quikleaf",
         "pypi": null,
@@ -340,6 +340,21 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v1.2.1",
+          "published_at": "2026-11-02T05:52:17Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.1"
+        },
+        {
+          "tag_name": "v1.2.0",
+          "published_at": "2026-11-02T04:28:30Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.0"
+        },
+        {
+          "tag_name": "v1.1.0",
+          "published_at": "2026-11-01T00:29:50Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.1.0"
+        },
         {
           "tag_name": "v1.0.3",
           "published_at": "2026-06-26T06:15:45Z",
@@ -506,9 +521,9 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 10,
+      "downloads": 9,
       "npm_downloads": 0,
-      "pypi_downloads": 10,
+      "pypi_downloads": 9,
       "npm": "—",
       "pypi": "1.0.2",
       "arduino": "—",
@@ -603,8 +618,8 @@
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 1,
-      "npm_downloads": 1,
+      "downloads": 8,
+      "npm_downloads": 8,
       "pypi_downloads": 0,
       "npm": "1.0.9",
       "pypi": "—",
@@ -646,9 +661,9 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 3,
+      "downloads": 5,
       "npm_downloads": 0,
-      "pypi_downloads": 3,
+      "pypi_downloads": 5,
       "npm": "—",
       "pypi": "0.1.2",
       "arduino": "—",
