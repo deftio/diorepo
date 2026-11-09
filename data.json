@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T06:35:35.902Z",
+  "generated": "2026-11-09T06:36:21.106Z",
   "projects": [
     {
       "project": "bitwrench",
@@ -7,18 +7,18 @@
       "description": "bitwrench is a javascript front end and ui library which provides updates, components, and works with zero dependancies",
       "language": "JavaScript",
       "stars": 9,
-      "contributors": 2,
-      "open_issues": 12,
-      "total_issues": 30,
-      "downloads": 147,
-      "npm_downloads": 147,
+      "contributors": 3,
+      "open_issues": 6,
+      "total_issues": 40,
+      "downloads": 684,
+      "npm_downloads": 684,
       "pypi_downloads": 0,
-      "npm": "2.1.12",
+      "npm": "2.1.14",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v2.1.12",
+      "github_tag": "v2.1.14",
       "packages": {
         "npm": "bitwrench",
         "pypi": null,
@@ -26,6 +26,16 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v2.1.14",
+          "published_at": "2026-11-08T01:31:52Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.14"
+        },
+        {
+          "tag_name": "v2.1.13",
+          "published_at": "2026-11-07T18:16:06Z",
+          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.13"
+        },
         {
           "tag_name": "v2.1.12",
           "published_at": "2026-11-01T00:11:23Z",
@@ -40,43 +50,33 @@
           "tag_name": "v2.1.10",
           "published_at": "2026-09-24T02:19:55Z",
           "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.10"
-        },
-        {
-          "tag_name": "v2.1.9",
-          "published_at": "2026-09-23T02:22:45Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.9"
-        },
-        {
-          "tag_name": "v2.1.8",
-          "published_at": "2026-09-21T21:23:46Z",
-          "html_url": "https://github.com/deftio/bitwrench/releases/tag/v2.1.8"
         }
       ],
       "recent_issues": [
         {
-          "number": 118,
-          "title": "Slot setters render \"[object Object]\" for bw.raw() and arrays; only strings and a single TACO work",
-          "html_url": "https://github.com/deftio/bitwrench/issues/118"
+          "number": 127,
+          "title": "2.1.13 follow-ups from quikleaf: makeFormGroup copies id onto a wrapper input; append/replace null return pushes a throwing wrapper onto every consumer",
+          "html_url": "https://github.com/deftio/bitwrench/issues/127"
         },
         {
-          "number": 117,
-          "title": "bwcli attach --allow-screenshot fails cross-origin: html2canvas is fetched from the page's origin, not the attach server",
-          "html_url": "https://github.com/deftio/bitwrench/issues/117"
+          "number": 125,
+          "title": "bwcli attach /screenshot: html2canvas 1.4.1 aborts on `color-mix()`/CSS Color 4, and the REPL does not report the failure",
+          "html_url": "https://github.com/deftio/bitwrench/issues/125"
         },
         {
-          "number": 116,
-          "title": "bwcli attach `/tree` prints `?`: the REPL passes the wire envelope, not the tree, to printTree (and cls vs classes)",
-          "html_url": "https://github.com/deftio/bitwrench/issues/116"
+          "number": 121,
+          "title": "Palette: a muted/faint text token with a contrast floor (secondary/tertiary text)",
+          "html_url": "https://github.com/deftio/bitwrench/issues/121"
         },
         {
-          "number": 115,
-          "title": "No way to seed the alternate (dark) palette; luminance inversion turns a mid-lightness accent into near-black",
-          "html_url": "https://github.com/deftio/bitwrench/issues/115"
+          "number": 108,
+          "title": "jazzmac follow-ups: makeTooltip in lean, a core build, focus preservation across mount",
+          "html_url": "https://github.com/deftio/bitwrench/issues/108"
         },
         {
-          "number": 114,
-          "title": "dist/bitwrench.d.ts BCCL config interfaces disagree with the factories; typed props are rejected at runtime",
-          "html_url": "https://github.com/deftio/bitwrench/issues/114"
+          "number": 91,
+          "title": "Embedded registry packaging: Arduino, PlatformIO, Espressif Component Registry",
+          "html_url": "https://github.com/deftio/bitwrench/issues/91"
         }
       ]
     },
@@ -85,7 +85,7 @@
       "github": "deftio/fr_math",
       "description": "Fixed-point math library (integer / no FPU)  for embedded C.  Trig, log/exp, sqrt, 2D transforms, wave generators, ADSR and variable radix support.  ~4.5 KB ",
       "language": "C++",
-      "stars": 47,
+      "stars": 48,
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 3,
@@ -217,16 +217,16 @@
       "stars": 17,
       "contributors": 2,
       "open_issues": 0,
-      "total_issues": 3,
-      "downloads": 2263,
-      "npm_downloads": 2263,
+      "total_issues": 4,
+      "downloads": 2139,
+      "npm_downloads": 2139,
       "pypi_downloads": 0,
-      "npm": "1.2.21",
+      "npm": "1.2.22",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v1.2.21",
+      "github_tag": "v1.2.22",
       "packages": {
         "npm": "quikdown",
         "pypi": null,
@@ -234,6 +234,11 @@
         "espressif": null
       },
       "releases": [
+        {
+          "tag_name": "v1.2.22",
+          "published_at": "2026-11-07T18:25:21Z",
+          "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.22"
+        },
         {
           "tag_name": "v1.2.21",
           "published_at": "2026-06-20T05:58:35Z",
@@ -253,11 +258,6 @@
           "tag_name": "v1.2.17",
           "published_at": "2026-05-31T16:41:28Z",
           "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.17"
-        },
-        {
-          "tag_name": "v1.2.16",
-          "published_at": "2026-05-25T07:29:18Z",
-          "html_url": "https://github.com/deftio/quikdown/releases/tag/v1.2.16"
         }
       ],
       "recent_issues": []
@@ -271,8 +271,8 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 2,
-      "downloads": 177,
-      "npm_downloads": 177,
+      "downloads": 147,
+      "npm_downloads": 147,
       "pypi_downloads": 0,
       "npm": "1.2.8",
       "pypi": "—",
@@ -320,19 +320,19 @@
       "github": "deftio/quikleaf",
       "description": "quikleaf is a standalone markdown editor / assistant / cli with llm tooling based on quikdown.",
       "language": "TypeScript",
-      "stars": 0,
+      "stars": 1,
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 16,
-      "npm_downloads": 16,
+      "downloads": 818,
+      "npm_downloads": 818,
       "pypi_downloads": 0,
-      "npm": "1.0.3",
+      "npm": "1.2.6",
       "pypi": "—",
       "arduino": "—",
       "platformio": "—",
       "espressif": "—",
-      "github_tag": "v1.2.1",
+      "github_tag": "v1.2.6",
       "packages": {
         "npm": "quikleaf",
         "pypi": null,
@@ -341,24 +341,29 @@
       },
       "releases": [
         {
+          "tag_name": "v1.2.6",
+          "published_at": "2026-11-07T21:03:26Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.6"
+        },
+        {
+          "tag_name": "v1.2.5",
+          "published_at": "2026-11-07T19:46:19Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.5"
+        },
+        {
+          "tag_name": "v1.2.3",
+          "published_at": "2026-11-04T04:45:58Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.3"
+        },
+        {
+          "tag_name": "v1.2.2",
+          "published_at": "2026-11-02T09:09:07Z",
+          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.2"
+        },
+        {
           "tag_name": "v1.2.1",
           "published_at": "2026-11-02T05:52:17Z",
           "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.1"
-        },
-        {
-          "tag_name": "v1.2.0",
-          "published_at": "2026-11-02T04:28:30Z",
-          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.2.0"
-        },
-        {
-          "tag_name": "v1.1.0",
-          "published_at": "2026-11-01T00:29:50Z",
-          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.1.0"
-        },
-        {
-          "tag_name": "v1.0.3",
-          "published_at": "2026-06-26T06:15:45Z",
-          "html_url": "https://github.com/deftio/quikleaf/releases/tag/v1.0.3"
         }
       ],
       "recent_issues": []
@@ -521,9 +526,9 @@
       "contributors": 2,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 9,
+      "downloads": 5,
       "npm_downloads": 0,
-      "pypi_downloads": 9,
+      "pypi_downloads": 5,
       "npm": "—",
       "pypi": "1.0.2",
       "arduino": "—",
@@ -618,8 +623,8 @@
       "contributors": 4,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 8,
-      "npm_downloads": 8,
+      "downloads": 26,
+      "npm_downloads": 26,
       "pypi_downloads": 0,
       "npm": "1.0.9",
       "pypi": "—",
@@ -661,9 +666,9 @@
       "contributors": 1,
       "open_issues": 0,
       "total_issues": 0,
-      "downloads": 5,
+      "downloads": 4,
       "npm_downloads": 0,
-      "pypi_downloads": 5,
+      "pypi_downloads": 4,
       "npm": "—",
       "pypi": "0.1.2",
       "arduino": "—",
@@ -699,9 +704,9 @@
       "contributors": 1,
       "open_issues": 1,
       "total_issues": 4,
-      "downloads": 5,
+      "downloads": 9,
       "npm_downloads": 0,
-      "pypi_downloads": 5,
+      "pypi_downloads": 9,
       "npm": "—",
       "pypi": "1.2.6",
       "arduino": "—",
